@@ -1,6 +1,6 @@
 {
-    "name": "@raphiniert/ra-data-postgrest",
-    "version": "1.0.1",
+    "name": "@xero88/ra-data-postgrest",
+    "version": "1.0.3",
     "description": "subZero data provider for react-admin",
     "main": "lib/index.js",
     "module": "esm/index.js",
@@ -15,7 +15,7 @@
         "François Zaninotto",
         "Raphael Scheible"
     ],
-    "repository": "scheiblr/ra-data-postgrest",
+    "repository": "https://github.com/xero88/ra-data-postgrest",
     "homepage": "https://github.com/raphiniert-com/ra-data-postgrest",
     "bugs": "https://github.com/raphiniert-com/ra-data-postgrest/issues",
     "license": "MIT",
@@ -37,5 +37,7 @@
     },
     "peerDependencies": {
         "ra-core": "^3.1.0"
-    }
+    },
+    "publishConfig": { "registry": "https://npm.pkg.github.com/" }
+
 }
