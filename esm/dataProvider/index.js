@@ -101,8 +101,9 @@ export default (function (apiUrl, httpClient, defaultListOp) {
         },
         getMany: function (resource, params) {
             var query = JSON.stringify(params.ids);
-            console.log("saluuuuut =)");
-            var url = apiUrl + "/" + resource + "?id=in.(" + stringify(query) + ")";
+            console.log("hallo");
+            console.log(query);
+            var url = apiUrl + "/" + resource + "?id=in.(" + query + ")";
             return httpClient(url).then(function (_a) {
                 var json = _a.json;
                 return ({ data: json });
