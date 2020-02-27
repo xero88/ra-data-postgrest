@@ -109,8 +109,9 @@ export default (apiUrl, httpClient = fetchUtils.fetchJson, defaultListOp = 'eq')
     const query = JSON.stringify(params.ids);
 
     console.log("saluuuuut =)");
+    console.log(query);
 
-    const url = `${apiUrl}/${resource}?id=in.(${stringify(query)})`;
+    const url = `${apiUrl}/${resource}?id=in.(${query})`;
     return httpClient(url).then(({ json }) => ({ data: json }));
   },
 
