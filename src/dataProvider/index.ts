@@ -106,12 +106,9 @@ export default (apiUrl, httpClient = fetchUtils.fetchJson, defaultListOp = 'eq')
     })),
 
   getMany: (resource, params) => {
-    const query = JSON.stringify(params.ids);
+    const ids = params.ids.join(",");
 
-    console.log("hallo");
-    console.log(query);
-
-    const url = `${apiUrl}/${resource}?id=in.(${query})`;
+    const url = `${apiUrl}/${resource}?id=in.(${ids})`;
     return httpClient(url).then(({ json }) => ({ data: json }));
   },
 
